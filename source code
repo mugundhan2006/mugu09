@@ -3,6 +3,8 @@
 int main() {
     float num1, num2;
     int choice;
+
+    // Display menu to the user
     printf("Select an operation:\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
@@ -10,8 +12,12 @@ int main() {
     printf("4. Division\n");
     printf("Enter your choice (1/2/3/4): ");
     scanf("%d", &choice);
+
+    // Get the two numbers from the user
     printf("Enter two numbers: ");
     scanf("%f %f", &num1, &num2);
+
+    // Perform the operation based on user choice
     switch (choice) {
         case 1:
             printf("Result: %.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
@@ -23,6 +29,7 @@ int main() {
             printf("Result: %.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
             break;
         case 4:
+            // Check if division by zero
             if (num2 != 0) {
                 printf("Result: %.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
             } else {
@@ -35,4 +42,3 @@ int main() {
 
     return 0;
 }
-
